@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 
+
+
 const Search = () => {
     const [city, setCity] = useState('');
     
@@ -15,15 +17,23 @@ const Search = () => {
     };
     
     return (
-        <form onSubmit={handleSubmit}>
+        
+        <form className="search-container" onSubmit={handleSubmit}>
         <input
+            
+            className="search-container input"
             type="text"
             value={city}
             onChange={handleInputChange}
             placeholder="Enter city name"
         />
-        <button type="submit">Submit</button>
+       
+       
+        
+        <button className='submit-button' type="submit">Submit</button>
         </form>
+
+
     );
 }
 
